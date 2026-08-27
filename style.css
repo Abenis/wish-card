@@ -1,11 +1,11 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
     min-height: 100vh;
 
     display: flex;
@@ -14,25 +14,26 @@ body {
 
     background: linear-gradient(
         135deg,
-        #ffd6e7
+        #ffd6e7,
         #fff0f5
     );
+
     overflow: hidden;
 }
 
-.content {
+.container {
     text-align: center;
 }
 
-.envelope { 
+.envelope {
     font-size: 100px;
     margin-bottom: 20px;
 
-    animation: floating 2s infinate ease-in-out
+    animation: floating 2s infinite ease-in-out;
 }
 
 h1 {
-    color: "7a4057";
+    color: #7a4057;
     font-size: 24px;
     margin-bottom: 25px;
 }
@@ -53,12 +54,12 @@ button {
 }
 
 button:hover {
-    tranform: scale(1.05);
+    transform: scale(1.05);
     background: #d96f92;
-
 }
 
-/*Background */
+
+/* Background overlay */
 
 .overlay {
     position: fixed;
@@ -79,9 +80,11 @@ button:hover {
     padding: 20px;
 }
 
-/*Wish Card*/
+
+/* Wish card */
+
 .wish-card {
-    position:relative;
+    position: relative;
 
     background: white;
 
@@ -89,12 +92,12 @@ button:hover {
     max-width: 450px;
 
     padding: 40px 30px;
-    
+
     border-radius: 25px;
-    
+
     text-align: center;
-    
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 2);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
 
     animation: popup 0.5s ease;
 }
@@ -102,6 +105,11 @@ button:hover {
 .heart {
     font-size: 60px;
     margin-bottom: 10px;
+}
+
+.wish-card h2 {
+    color: #d96f92;
+    margin-bottom: 20px;
 }
 
 .wish-card p {
@@ -115,11 +123,13 @@ button:hover {
     margin-top: 20px;
 }
 
-signature {
+.signature {
     font-style: italic;
 }
 
-/*Close button*/
+
+/* Close button */
+
 .close {
     position: absolute;
 
@@ -140,27 +150,31 @@ signature {
     color: #d96f92;
 }
 
-/*Animations*/
+
+/* Animations */
 
 @keyframes popup {
+
     from {
         opacity: 0;
         transform: scale(0.7);
-
     }
 
     to {
         opacity: 1;
         transform: scale(1);
     }
+
 }
 
-@keyframes floating{
-    0%, 100%{
+@keyframes floating {
+
+    0%, 100% {
         transform: translateY(0);
     }
 
-    50%{
+    50% {
         transform: translateY(-10px);
     }
+
 }
