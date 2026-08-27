@@ -1,5 +1,5 @@
 function openCard(){
-    document.getElemnetById("overlay").style.display = "flex";
+    document.getElementById("overlay").style.display = "flex";
 
 }
 
